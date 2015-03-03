@@ -1,0 +1,15 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+
+.container
+  .row
+    div.col-md-8
+      div.media(ng-repeat='file in data')
+        div.media-body
+          h4.media-heading
+            i.fa.fa-file-pdf-o
+            |  {{ file.name }}
+          p {{ file.description }}
+    div.col-md-4
+
+div(ng-include='"components/footer/footer.html"')

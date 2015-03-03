@@ -1,0 +1,127 @@
+
+/**
+ * Bootstrap Fonts
+ */
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
+    src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+/**
+ *Font Awesome Fonts
+ */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
+    src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+    url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+ * App-wide Styles
+ */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/**
+ * Kids 4 Truth EquipU-Specific Styles
+ */
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.mainblock {
+  background-color: #FFF;
+}
+
+/* Small devices (tablets, 768px and up i.e. @screen-sm-min ) */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 690px;
+  }
+
+
+  .mainblock {
+    background-color: #FFF;
+    max-width: 920px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up i.e. @screen-md-min) */
+@media screen and (min-width: 992px)
+{
+  body {
+    background-color: #F9A100;
+  }
+
+  .container {
+    max-width: 870px;
+  }
+
+  .mainblock {
+    background-color: #FFF;
+    background-image: url('/assets/images/fadehome.gif');
+    max-width: 920px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.footer {
+  background-color: #EBF2F9;
+  border-color: #BBB;
+  border-width: 2px 0px 0px;;
+  padding: 10px 0;
+  margin-top: 70px;
+}
+
+.titleDescription {
+  color: #999;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.subTitleLight {
+  color: #999;
+  text-transform:  uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.subTitleDark {
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: 20px;
+}
+
