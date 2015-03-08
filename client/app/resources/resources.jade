@@ -1,15 +1,87 @@
 div(ng-include='"components/navbar/navbar.html"')
 
 
-.container
-  .row
+div.container
+  div.row
     div.col-md-8
-      div.media(ng-repeat='file in data')
-        div.media-body
-          h4.media-heading
-            i.fa.fa-file-pdf-o
-            |  {{ file.name }}
-          p {{ file.description }}
+      div.row
+        form(action='#')
+          div.col-md-12
+            div.input-group
+              input.form-control.input-md(id='SearchString', name='searchString', placeholder='Search...', type='text')
+              span.input-group-btn
+                span.glyphicon.glyphicon-search
+                button.btn.btn-primary(type='submit')
+                  span.glyphicon.glyphicon-search
+      div.row
+        div.col-md-12
+          | 60 results found in 871 ms. Page 1 of 3
+
+      div.row
+        div.col-md-12
+          div.pagination-container
+            ul.pagination
+              li.active
+                a 1
+              each val in [2, 3, 4, 5, 6, 7, 8, 9, 10]
+                li
+                  a(href='/Search?page=' + val) #{ val }
+              li.disabled.PagedList-ellipses
+                a ...
+              li.PagedList-skipToNext
+                a(href='/Search?page=2', rel='next') »
+              li.PagedList-skipToLast
+                a(href='/Search?page=213') »»
+
+      div.row
+        div.col-md-12
+          div.media(ng-repeat='file in data')
+            div.media-body
+              a(href='#')
+                h4.media-heading
+                  i.fa.fa-file-pdf-o
+                  = " "
+                  strong  {{ file.name }}
+              small
+                span(title='Total Downloads')
+                  i.fa.fa-download
+                  = ' '
+                  | {{ file.downloads }}
+                = ' '
+                span(title='Last Updated')
+                  i.fa.fa-clock-o.padLeft
+                  = ' '
+                  | {{ file.dateAdded }}
+              p {{ file.description }}
+                br
+                small
+                  span.label.xs-label.label-default.smallPadRight(ng-repeat='tag in file.tags')
+                    | {{ tag }}
+      div.row
+        div.col-md-12
+          div.pagination-container
+            ul.pagination
+              li.active
+                a 1
+              each val in [2, 3, 4, 5, 6, 7, 8, 9, 10]
+                li
+                  a(href='/Search?page=' + val) #{ val }
+              li.disabled.PagedList-ellipses
+                a ...
+              li.PagedList-skipToNext
+                a(href='/Search?page=2', rel='next') »
+              li.PagedList-skipToLast
+                a(href='/Search?page=213') »»
+
     div.col-md-4
+      div.panel.panel-default
+        div.panel-heading
+          h4.panel-title Quick Filters
+
+        ul.list-group
+          a.list-group-item(href='#', ng-repeat='facet in facets', ng-class='{active: facet.isActive}', ng-click='toggleActive(facet)')
+            | {{ facet.title }}
+            span.badge {{ facet.results }}
+
 
 div(ng-include='"components/footer/footer.html"')

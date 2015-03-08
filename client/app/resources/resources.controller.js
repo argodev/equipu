@@ -214,4 +214,32 @@ angular.module('equipuApp')
       }
     );
 
+    $scope.facets = [];
+    $scope.facets.push(
+      { 'id': 1, 'title': 'Lesson Plans', 'results': 132},
+      { 'id': 2, 'title': 'Organization', 'results': 35},
+      { 'id': 3, 'title': 'Music', 'results': 12},
+      { 'id': 4, 'title': 'Training', 'results': 27},
+      { 'id': 5, 'title': 'Discoverers (Level 1)', 'results': 70},
+      { 'id': 6, 'title': 'Developers (Level 2)', 'results': 56},
+      { 'id': 7, 'title': 'Detectives (Level 3)', 'results': 29},
+      { 'id': 8, 'title': 'Defenders (Level 4)', 'results': 32},
+      { 'id': 9, 'title': 'Theme 1', 'results': 5},
+      { 'id': 10, 'title': 'Theme 2', 'results': 7},
+      { 'id': 11, 'title': 'Theme 3', 'results': 8},
+      { 'id': 12, 'title': 'Theme 4', 'results': 6},
+      { 'id': 13, 'title': 'Theme 5', 'results': 10},
+      { 'id': 14, 'title': 'Theme 6', 'results': 13},
+      { 'id': 15, 'title': 'Theme 7', 'results': 12},
+      { 'id': 16, 'title': 'Theme 8', 'results': 8},
+      { 'id': 17, 'title': 'Theme 9', 'results': 9},
+      { 'id': 18, 'title': 'Theme 10', 'results': 11},
+      { 'id': 19, 'title': 'Theme 11', 'results': 15},
+      { 'id': 20, 'title': 'Theme 12', 'results': 7}
+    );
+
+    $scope.toggleActive = function(facet){
+      facet.isActive = !facet.isActive;
+    }
+
   });
