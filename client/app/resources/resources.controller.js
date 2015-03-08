@@ -240,6 +240,6 @@ angular.module('equipuApp')
 
     $scope.toggleActive = function(facet){
       facet.isActive = !facet.isActive;
-    }
+    };
 
   });
